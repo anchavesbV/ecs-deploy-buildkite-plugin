@@ -111,6 +111,8 @@ register_command="aws ecs register-task-definition \
     --family ${task_family} \
     --network-mode awsvpc \
     --requires-compatibilities "FARGATE" \
+    --cpu 2000 \
+    --memory 4000 \
     --container-definitions '$container_definitions_json'"
 
 if [[ -n "${task_role_arn}" ]]; then
