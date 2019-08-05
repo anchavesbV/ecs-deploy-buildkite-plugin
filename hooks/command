@@ -109,7 +109,7 @@ done
 echo "--- :ecs: Registering new task definition for ${task_family}"
 register_command="aws ecs register-task-definition \
     --family ${task_family} \
-    --network-mode awsvpc
+    --network-mode awsvpc \
     --requires-compatibilities "FARGATE" \
     --container-definitions '$container_definitions_json'"
 
